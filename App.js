@@ -30,7 +30,7 @@ export default class extends React.Component {
   getLocation = async () => {
     try {
       // throw Error(); // 에러발생시킴
-      await Location.requestPermissionsAsync();
+      await Location.requestForegroundPermissionsAsync();
       const {
         coords: { latitude, longitude },
       } = await Location.getCurrentPositionAsync();
